@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  background: linear-gradient(to right, #688197, #49eaf3, pink);
+  overflow: hidden;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.9);
+  width: 90%;
+  max-width: 500px;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+
+}
+.container:hover {
+  border: 3px solid #6a1b9a;
+
+}
+
+.container:hover {
+  transform: scale(1.05);
+  background-color: rgb(246, 219, 224);
+  border: 3px solid #6a1b9a;
+  box-shadow: 0 4px 12px rgba(38, 1, 42, 0.5);
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #f70818;
+  font-weight: 1000;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  animation: upDownMotion 2s infinite ease-in-out;
+}
+
+@keyframes upDownMotion {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+h1:hover {
+  color: #0a7ccd;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  border: 2px solid #137dc9;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  border-radius: 35px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #ec4b0c;
+  transform: scale(1.05);
+}
+
+#result {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+}
+
+button#diet-plan-btn {
+  background-color: #007bff;
+  font-size: 1.2em;
+  padding: 15px;
+}
+
+button#diet-plan-btn:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    max-width: 80%;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+
+  input, select, button {
+    font-size: 1.1rem;
+    padding: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+    max-width: 90%;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  input, select, button {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width: 375px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  input, select, button {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+  }
+}
